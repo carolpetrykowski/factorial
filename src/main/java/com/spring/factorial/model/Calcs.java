@@ -9,17 +9,17 @@ public class Calcs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     private Integer number;
 
     private Integer result;
 
-    public Long getId(){
+    public Integer getId(){
         return this.id;
     }
 
-    public void setId(Long id){
+    public void setId(Integer id){
         this.id = id;
     }
 
