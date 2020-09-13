@@ -16,7 +16,7 @@ public class DummyData {
     @Autowired
     FactorialRepository factorialRepository;
 
-    @PostConstruct
+    //@PostConstruct
     public void savePosts(){
 
         List<Calcs> calcList = new ArrayList<>();
