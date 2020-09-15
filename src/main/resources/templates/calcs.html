@@ -1,1 +1,59 @@
-<h1>Ola mundo!</h1>
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>Fatorial</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">Fatorial</span>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container" style="width: 60%; padding-bottom: 30px">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+
+            <article>
+                <p>Esta aplicação realiza o cálculo fatorial de um número.
+                    Para isso, digite um número no campo abaixo e clique no botão "Fatorial".</p>
+            </article>
+
+            <form th:action="@{/result}" th:method="post">
+                <div class="form-group input-group mb-3">
+                    <input type="number" class="form-control" name="number" placeholder="Digite um número..." required>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Fatorial</button>
+                    </div>
+                </div>
+            </form>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Número</th>
+                    <th scope="col">Fatorial</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="calc : ${calcs}">
+                    <td th:text="${calc.id}"></td>
+                    <td th:text="${calc.number}"></td>
+                    <td th:text="${calc.result}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+</body>
+</html>
