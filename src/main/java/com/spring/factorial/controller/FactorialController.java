@@ -31,7 +31,8 @@ public class FactorialController {
         ModelAndView mv = new ModelAndView("result");
         Calcs calc;
         // Verifica se algum numero foi digitado
-        if(number != null){
+        // E se o numero digitado eh positivo
+        if(number != null && number > 0){
             // Recupera do banco se ja existe algum calculo com aquele numero
             calc = factorialService.findByNumber(number);
             if(calc != null){
