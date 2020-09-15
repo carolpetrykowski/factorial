@@ -7,7 +7,7 @@ import java.util.List;
 public interface FactorialService {
 
     List<Calcs> findAll();
-    Calcs findById(Integer id);
     Calcs save(Calcs calc);
-
+    Long calculate(Long number);
+    Calcs findByNumber(Long number);
 }
