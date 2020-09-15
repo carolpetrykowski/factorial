@@ -36,16 +36,4 @@ public class CalculateFactorialServiceImplTest {
         assertEquals(120l, factorialFive);
     }
 
-    @Test
-    public void findFactorialByNumber(){
-        Calcs calc = new Calcs();
-        calc.setNumber(100l);
-        calc.setResult(8000l);
-        serviceImpl.save(calc);
-
-        calc = serviceImpl.findByNumber(3l);
-
-        assertNotNull(calc);
-    }
-
 }
