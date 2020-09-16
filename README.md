@@ -40,7 +40,7 @@ Aplicação que realiza o cálculo fatorial de um número.
     </li>
     <li>
         Se houver, mate o processo pelo número do PID
-        <ul><li>sudo kill NUMERO_PID -9</li></ul>
+        <ul><li>$ sudo kill NUMERO_PID -9</li></ul>
     </li>
     <li>
         Por fim, verifique se não há nenhum conteiner já existente com o mesmo nome (nesse caso: postgres:9.6):
@@ -48,7 +48,7 @@ Aplicação que realiza o cálculo fatorial de um número.
     </li>
     <li>
         Se houver, remova o conteiner existente:
-        <ul><li>docker rm CONTAINER_ID</li></ul>
+        <ul><li>$ docker rm CONTAINER_ID</li></ul>
     </li>
 </ol>
 
@@ -69,10 +69,13 @@ Aplicação que realiza o cálculo fatorial de um número.
 ---
 
 <h4>Bibliotecas e funcionalidades utilizadas:</h4>
-* **Springboot:** Projeto da Spring, tem por objetivo facilitar a configuração de projetos. Com ele é possível escoher os módulos que deseja por meio dos starters, as dependências deles, por sua vez, são incluídas no arquivo `pom.xml`.
-* **Thymeleaf:** Template engine, usado para facilitar a criação da camada de visualização de dados na aplicação.
-* **Bootstrap:** Framework web, usado para o desenvolvimento de interfaces web.
-* **Docker:** Tecnologia de containerização, permite encapsular aplicações ou ambientes dentro de um container. 
-* **jUnit:** Framework utilizado para testes. Com ele podem ser feitas verificações se os resultados esperados estão sendo obtidos a partir do código implementado, caso a resposta esperada não seja obtida, o JUnit exibe os possíveis erros.
-* **Spring Data JPA:** Framework para facilitar a criação de repositórios, pois já possiu alguns métodos prontos, como consultas.  
-* **Spring Web:** Para criar aplicativos web, usando Spring MVC.
+
+<ul>
+    <li><b>Springboot:</b> Projeto da Spring, tem por objetivo facilitar a configuração de projetos. Com ele é possível escoher os módulos que deseja por meio dos starters, as dependências deles, por sua vez, são incluídas no arquivo pom.xml.</li>
+    <li><b>Thymeleaf:</b> Template engine, usado para facilitar a criação da camada de visualização de dados na aplicação.</li>
+    <li><b>Bootstrap:</b> Framework web, usado para o desenvolvimento de interfaces web.</li>
+    <li><b>Docker:</b> Tecnologia de containerização, permite encapsular aplicações ou ambientes dentro de um container.</li>
+    <li><b>jUnit:</b> Framework utilizado para testes. Com ele podem ser feitas verificações se os resultados esperados estão sendo obtidos a partir do código implementado, caso a resposta esperada não seja obtida, o JUnit exibe os possíveis erros.</li>
+    <li><b>Spring Data JPA:</b> Framework para facilitar a criação de repositórios, pois já possiu alguns métodos prontos, como consultas.</li>
+    <li><b>Spring Web:</b> Para criar aplicativos web, usando Spring MVC.</li>
+</ul>
