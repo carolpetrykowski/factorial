@@ -1,0 +1,11 @@
+postgres:
+  image: postgres:9.6
+  expose:
+    - 5432
+  ports:
+    - 5432:5432
+  environment:
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_USER=postgres
+    - POSTGRES_DB=factorial
+# sudo docker-compose -f docker-compose.yml up
