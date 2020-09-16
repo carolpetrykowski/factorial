@@ -9,6 +9,7 @@ Aplicação que realiza o cálculo fatorial de um número.
     <li>
         Na pasta /factorial/database, rode o comando:
         <ul><li>$ sudo docker-compose -f docker-compose.yml up</li></ul>
+        <ul><li>Em caso de erros, vide observação.</li></ul>
     </li>
     <li>
         Na pasta raiz do projeto (/factorial), rode os comandos:
@@ -24,6 +25,32 @@ Aplicação que realiza o cálculo fatorial de um número.
 </ol>
 
 ![Factorial](https://user-images.githubusercontent.com/41487157/93271407-8b6d5580-f789-11ea-88f6-3c49cb0237c0.gif)
+
+**Observação:**
+* Caso algum erro venha a acontecer com o passo número 1 (criação do banco PostgreSQL, por meio do docker). Siga os passos abaixo:
+
+<ol>
+    <li>
+        Dê permissão total para o arquivo docker-compose.yml, para isso execute:
+        <ul><li>$ sudo chmod 777 docker-compose.yml</li></ul>
+    </li>
+    <li>
+        Verifique existe algum processo rodando na porta 5432
+        <ul><li>$ sudo ss -lptn 'sport = :5432'</li></ul>
+    </li>
+    <li>
+        Se houver, mate o processo pelo número do PID
+        <ul><li>sudo kill NUMERO_PID -9</li></ul>
+    </li>
+    <li>
+        Por fim, verifique se não há nenhum conteiner já existente com o mesmo nome (nesse caso: postgres:9.6):
+        <ul><li>$ docker ps -a</li></ul>
+    </li>
+    <li>
+        Se houver, remova o conteiner existente:
+        <ul><li>docker rm CONTAINER_ID</li></ul>
+    </li>
+</ol>
 
 <br>
 
